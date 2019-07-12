@@ -1,0 +1,11 @@
+<p> <%= link_to "Nuevo", todo_new_path%> </p>
+
+
+<% @todos.each do |todo| %>
+<h1> <%= link_to todo.description, todo %> </h1>
+<p> <%= todo.completed %></p>
+<p> <%= link_to "Editar", todo_edit_path(todo)%> </p>
+<p> <%= link_to "Borrar", todo , method: :delete%> </p>
+
+<button type="button" class="btn btn-secondary"><%= link_to "Marcar como completado", todo_completed_path(todo) %> </button>
+<% end %>

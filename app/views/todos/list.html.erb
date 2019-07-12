@@ -1,0 +1,16 @@
+<div class="row">
+<div class="col-md-6">
+<h1>ToDos no Completados</h1>
+<% @completados.each do |todo| %>
+<h2> <%= todo.description %> </h2>
+<% end %>
+</div>
+
+<div class="col-md-6">
+<h1>ToDos Listos</h1>
+<% @incompletados.each do |todo| %>
+<h2> <%= todo.description %> </h2>
+<% end %>
+
+</div>
+</div>
